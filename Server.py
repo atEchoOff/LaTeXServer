@@ -98,7 +98,7 @@ def handle_compilation():
                 os.remove(final_zip_path)
 
             if temp_dir and os.path.exists(temp_dir):
-                shutil.rmtree(temp_dir)
+                shutil.rmtree(temp_dir, ignore_errors=True)
     else:
         abort(400, "An unknown error occurred.")
 
